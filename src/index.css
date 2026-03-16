@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif SC", serif;
+}
+
+:root {
+  --brand: #FF8BA7;
+  --bg: #FBF7F8;
+  --container: #FAF9F6;
+  --text: #111827;
+  --border: #FCE7EB;
+  --shadow: rgba(255, 139, 167, 0.1);
+}
+
+.theme-pink {
+  --brand: #FF8BA7;
+  --bg: #F5EBEB;
+  --container: #FAF9F6;
+  --text: #111827;
+  --border: #E8D8DB;
+  --shadow: rgba(255, 139, 167, 0.1);
+  --body-bg: #F0E6E8;
+}
+
+.theme-yellow {
+  --brand: #FFD700;
+  --bg: #FFF9E6;
+  --container: #FAF9F6;
+  --text: #111827;
+  --border: #FFF2CC;
+  --shadow: rgba(255, 215, 0, 0.1);
+  --body-bg: #FFF5D6;
+}
+
+.theme-green {
+  --brand: #E2FF54;
+  --bg: #1A1A1A;
+  --container: #111111;
+  --text: #FFFFFF;
+  --border: #333333;
+  --shadow: rgba(226, 255, 84, 0.2);
+  --body-bg: #0A0A0A;
+}
+
+.theme-blue {
+  --brand: #89CFF0;
+  --bg: #F0F9FF;
+  --container: #FAF9F6;
+  --text: #111827;
+  --border: #E0F2FE;
+  --shadow: rgba(137, 207, 240, 0.1);
+  --body-bg: #E0F2FE;
+}
+
+/* Safe Area for Notched Phones */
+.safe-area-top {
+  height: env(safe-area-inset-top, 20px);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.safe-area-bottom {
+  height: env(safe-area-inset-bottom, 20px);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--body-bg);
+  transition: background-color 1s ease;
+  /* Remove cursor none for mobile use */
+  cursor: auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.smooth-transition {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-bg {
+  background-color: var(--container);
+}
+
+.app-container {
+  background-color: var(--container);
+  border-color: var(--container);
+  color: var(--text);
+}
+
+.brand-bg { background-color: var(--brand); }
+.brand-text { color: var(--brand); }
+.theme-border { border-color: var(--border); }
+.theme-bg-soft { background-color: var(--bg); }
